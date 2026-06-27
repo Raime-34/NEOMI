@@ -47,6 +47,103 @@ body {
   height: 100%;
 }
 
+.trends {
+  width: 100%;
+  margin-top: 64px;
+}
+
+.trends-list {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.trends-item {
+  height: 320px;
+  background-color: black;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content-tags-list {
+  list-style-type: none;
+  display: flex;
+  column-gap: 15px;
+  row-gap: 2px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.trends-item-tags {
+  margin: 0 0 11px 0;
+}
+
+.content-title {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.content-title:hover {
+  color: #b59f5b;
+}
+
+.trends-item-title {
+  color: #fff;
+  margin: 0;
+}
+
+.content-tag {
+  font-size: 14px;
+  font-weight: 700;
+  color: #b59f5b;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.content-tag:hover {
+  text-decoration: underline;
+}
+
+.trends-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.trends-item-first::before {
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/trend1.jpg);
+}
+
+.trends-item-second::before {
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/trend2.jpg);
+}
+
+.trends-item-third::before {
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/trend3.jpg);
+}
+
+.trends-item-fourth::before {
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/trend4.jpg);
+}
+
+.trends-item-content {
+  border: 3px solid #b59f5b;
+  padding: 39px 34px;
+  margin: 16px 18px;
+}
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -145,8 +242,6 @@ body {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
-  column-gap: 15px;
-  font-size: 16px;
 }
 
 .article-info-content-tag {
@@ -155,16 +250,12 @@ body {
   color: #b59f5b;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  z-index: 1;
 }
 
 .article-info-content-tag:hover {
   text-decoration: underline;
-}
-
-.article-info-title {
-  color: #000;
-  text-decoration: none;
-  margin-bottom: 32px;
 }
 
 .article-info-title-content {
@@ -172,10 +263,18 @@ body {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-size: 20px;
+  z-index: 1;
+  position: relative;
 }
 
 .article-info-title-content:hover {
   color: #b59f5b;
+}
+
+.article-info-title {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 32px;
 }
 
 .article-info-author {
@@ -205,7 +304,7 @@ body {
   flex-direction: column;
 }
 
-.sidebar-section-header {
+.section-header {
   text-transform: uppercase;
   text-align: center;
   font-size: 14px;
@@ -213,7 +312,7 @@ body {
   margin-bottom: 23px;
 }
 
-.sidebar-section-header::after {
+.section-header::after {
   content: "";
   display: block;
   background: #b59f5b;
