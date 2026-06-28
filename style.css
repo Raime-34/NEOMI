@@ -438,7 +438,7 @@ body {
   box-sizing: border-box;
 }
 
-.subscribption-form-button {
+.action-button {
   border-width: 0;
   background-color: #b59f5b;
   color: #fff;
@@ -453,7 +453,7 @@ body {
   outline: 1px solid #b59f5b;
 }
 
-.subscribption-form-button:hover {
+.action-button:hover {
   background-color: #000;
 }
 
@@ -536,6 +536,62 @@ body {
   color: #b59f5b;
   font-weight: 700;
   vertical-align: super;
+}
+
+.our-products {
+  width: 1200px;
+}
+
+.goods-list {
+  display: flex;
+  gap: 65px;
+}
+
+.goods-item {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goods-item-img {
+  max-width: 300px;
+}
+
+.goods-content {
+  border: 3px solid #b59f5b;
+  margin-top: -25px;
+  padding: 26px 20px;
+  box-sizing: content-box;
+  flex-grow: 1;
+}
+
+.goods-content-title {
+  margin-top: 26px;
+  margin-bottom: 8px;
+}
+
+.goods-description {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.goods-item-purchase-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-info {
+  font-weight: 700;
+}
+
+.price-info-without-discount {
+  text-decoration: line-through;
+}
+
+.goods-item-purchase-block-button {
+  padding: 20px 30px;
 }
 
 .main-footer {
