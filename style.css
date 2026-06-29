@@ -49,6 +49,7 @@ body {
 
 .trends {
   width: 100%;
+  max-width: 1440px;
   margin-top: 64px;
 }
 
@@ -151,11 +152,18 @@ body {
 }
 
 .navigation-bar {
-  width: 1200px;
+  max-width: 1200px;
   display: flex;
-  gap: 530px;
+  gap: 44vw;
+  justify-content: space-between;
   align-items: center;
   z-index: 1;
+  margin: 0 35px;
+}
+
+.navigation-bar-burger-menu {
+  display: none;
+  fill: #fff;
 }
 
 .nav-menu-list {
@@ -165,6 +173,7 @@ body {
   flex-wrap: wrap;
   gap: 35px;
   padding: 0;
+  flex-shrink: 0;
 }
 
 .header-content-logo {
@@ -203,7 +212,7 @@ body {
 
 .page-content {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
@@ -212,7 +221,7 @@ body {
 }
 
 .main-articles-list {
-  width: 778px;
+  max-width: 778px;
   display: flex;
   flex-direction: column;
   gap: 57px;
@@ -539,19 +548,24 @@ body {
 }
 
 .our-products {
-  width: 1200px;
+  max-width: 1200px;
+  margin-top: 64px;
 }
 
 .goods-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 65px;
+  justify-content: center;
 }
 
 .goods-item {
-  width: calc(100% / 3);
+  /* width: calc(100% / 3); */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 340px;
 }
 
 .goods-item-img {
@@ -596,7 +610,8 @@ body {
 
 .main-footer {
   text-align: center;
-  width: 1200px;
+  max-width: 1200px;
+  width: 83%;
   padding-bottom: 41px;
 }
 
@@ -606,7 +621,6 @@ body {
   row-gap: 2px;
   flex-wrap: wrap;
   background: #f4f7f6;
-  width: 1170px;
   display: flex;
   gap: 26px;
   justify-content: center;
@@ -639,4 +653,35 @@ body {
   color: #999;
   font-weight: 700;
   text-decoration: none;
+}
+
+@media (max-width: 1150px) {
+  .navigation-bar-burger-menu {
+    display: block;
+  }
+
+  .nav-menu-list {
+    display: none;
+  }
+
+  .trends-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-articles-list-item {
+    flex-direction: column;
+    max-width: 391px;
+  }
+
+  .article-info {
+    margin-left: 0;
+  }
+
+  .page-content {
+    gap: 35px;
+  }
+}
+
+.main {
+  width: 66%;
 }
