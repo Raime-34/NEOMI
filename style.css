@@ -61,7 +61,7 @@ body {
 }
 
 .trends-item {
-  height: 320px;
+  max-height: 320px;
   background-color: black;
   position: relative;
   display: flex;
@@ -120,6 +120,8 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.5;
 }
 
@@ -143,6 +145,7 @@ body {
   border: 3px solid #b59f5b;
   padding: 39px 34px;
   margin: 16px 18px;
+  width: 100%;
 }
 
 .header-content {
@@ -154,7 +157,7 @@ body {
 .navigation-bar {
   max-width: 1200px;
   display: flex;
-  gap: 44vw;
+  gap: clamp(100px, 44vw, 633px);
   justify-content: space-between;
   align-items: center;
   z-index: 1;
@@ -181,6 +184,7 @@ body {
   display: inline-block;
   position: relative;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .nav-menu-list-item {
@@ -205,7 +209,7 @@ body {
   font-size: 45px;
   line-height: 1.83;
   text-transform: uppercase;
-  width: 695px;
+  max-width: 695px;
   margin-top: 97px;
   font-size: 41px;
 }
@@ -218,6 +222,10 @@ body {
   margin-right: auto;
   margin-bottom: 0;
   gap: 120px;
+}
+
+.main {
+  width: 66%;
 }
 
 .main-articles-list {
@@ -316,7 +324,7 @@ body {
 .section-header {
   text-transform: uppercase;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 23px;
 }
@@ -556,7 +564,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 65px;
-  justify-content: center;
 }
 
 .goods-item {
@@ -655,7 +662,63 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1249px) {
+  .main-articles-list-item:nth-of-type(n + 6) {
+    display: none;
+  }
+
+  .navigation-bar {
+    gap: 68vw;
+  }
+
+  .article-info-title-content {
+    margin-bottom: 32px;
+  }
+
+  .article-info-author {
+    margin-bottom: 30px;
+  }
+
+  .page-content {
+    margin-top: 50px;
+  }
+
+  .trends-item-title {
+    font-size: 17px;
+  }
+
+  .trends {
+    margin-top: 48px;
+  }
+
+  .trends-item {
+    height: 245px;
+  }
+
+  .trends-item-content {
+    padding: 30px 34px;
+  }
+
+  .large-section-header {
+    font-size: 18px;
+    margin-bottom: 19px;
+  }
+
+  .page-header {
+    padding-bottom: 80px;
+  }
+
+  .header-content-title {
+    max-width: 655px;
+    margin-top: 75px;
+    line-height: 1.5;
+    font-size: 41px;
+  }
+
+  .header-content-logo {
+    width: 158px;
+  }
+
   .navigation-bar-burger-menu {
     display: block;
   }
@@ -680,8 +743,186 @@ body {
   .page-content {
     gap: 35px;
   }
+
+  .article-info-mini-list {
+    gap: 5px;
+  }
+
+  .main-articles-list-item-ref {
+    margin-bottom: 10px;
+  }
+
+  .main-footer {
+    width: calc(100% - 2 * 34px);
+  }
+
+  .our-products {
+    margin-left: 34px;
+    margin-right: 34px;
+  }
 }
 
-.main {
-  width: 66%;
+@media (max-height: 1249px) and (orientation: landscape) {
+  .trends-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .page-header {
+    height: 514px;
+  }
+
+  .header-content-title {
+    font-size: clamp(26px, 5vw, 41px);
+  }
+
+  .page-header:before {
+    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/banner-mobile.jpg);
+  }
+
+  .trends {
+    margin-bottom: 43px;
+  }
+
+  .trends-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .page-content {
+    align-items: center;
+    margin: 0 14px;
+    flex-direction: column;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .main-articles-list-item-ref {
+    min-width: 100%;
+  }
+
+  .goods-list {
+    justify-content: center;
+  }
+
+  .main-footer {
+    width: calc(100% - 2 * 14px);
+  }
+}
+
+@media (max-width: 360px) {
+  .page-header {
+    position: relative;
+  }
+
+  .header-content-logo {
+    position: absolute;
+    top: 50%;
+    width: 269px;
+    transform: translate(17%, -133%);
+  }
+
+  .navigation-bar-burger-menu {
+    position: absolute;
+    top: 30px;
+    right: 17px;
+  }
+
+  .navigation-bar {
+    width: 100%;
+    margin: 0 15px;
+    gap: 0;
+  }
+
+  .header-content-title {
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -67%);
+    line-height: 36px;
+  }
+
+  .trends-item-title {
+    font-size: 16px;
+  }
+
+  .article-info-content-tags {
+    margin-bottom: 16px;
+  }
+
+  .article-info-title-content {
+    margin-bottom: 19px;
+  }
+
+  .article-info-author {
+    margin-bottom: 16px;
+  }
+
+  .main-articles-list {
+    gap: 9px;
+  }
+
+  .article-info-author {
+    margin-bottom: 22px;
+  }
+
+  .navigation-bar-burger-menu {
+    align-self: flex-end;
+  }
+
+  .trends {
+    margin-top: 42px;
+  }
+
+  .trends-item {
+    height: 231px;
+  }
+
+  .trends-item-content {
+    padding: 29px 30px;
+  }
+
+  .article-info-title-content {
+    font-size: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    gap: 38px;
+  }
+
+  .section-header {
+    margin-bottom: 26px;
+  }
+
+  .article-info-mini-item-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .goods-item-img {
+    height: 284px;
+    object-fit: cover;
+  }
+
+  .our-products {
+    margin: 0;
+  }
+
+  .goods-list {
+    gap: 14px;
+  }
+
+  .footer-social {
+    margin-top: 23px;
+    margin-bottom: 37px;
+  }
+}
+
+@media (max-height: 680px) and (orientation: landscape) {
+  .trends-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
