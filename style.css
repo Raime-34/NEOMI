@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: "OpenSans", sans-serif;
+  min-width: 360px;
 }
 
 .page-header {
