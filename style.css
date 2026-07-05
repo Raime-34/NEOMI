@@ -39,7 +39,7 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
-  background-image: url(https://raw.githubusercontent.com/netology-code/html-2-diploma/refs/heads/master/sources/images/banner-bg.jpg);
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.4;
@@ -667,6 +667,10 @@ body {
 }
 
 @media (max-width: 1249px) {
+  .page-header:before {
+    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/banner-bg-tablet.jpg);
+  }
+
   .main-articles-list-item:nth-of-type(n + 6) {
     display: none;
   }
@@ -925,7 +929,7 @@ body {
   }
 }
 
-@media (max-height: 680px) and (orientation: landscape) {
+@media (max-height: 640px) and (orientation: landscape) {
   .trends-list {
     grid-template-columns: repeat(2, 1fr);
   }
