@@ -866,5 +866,54 @@
         >Copyright © 2009–2019 City Blog LLC.</a
       >
     </footer>
+    <div class="pop-up _hiden">
+      <div class="feedback-form">
+        <div class="section-header large-section-header">Ваш фидбек</div>
+        <form
+          class="feedback-form-area"
+          action="">
+          <p class="feedback-form-area-hint">Как часто вы заходите на сайт?</p>
+          <select
+            class="selector"
+            name="visit_frequency">
+            <option value="1">Почти каждый день</option>
+            <option value="2">Раз в неделю</option>
+            <option value="3">Раз в месяцц</option>
+          </select>
+          <p class="feedback-form-area-hint">Вы подписаны на e-mail рассылку?</p>
+          <div class="radio-buttons">
+            <input
+              class="hidden-radio-button _hiden"
+              type="radio"
+              id="yes"
+              name="email_subscribtion_status"
+              checked />
+            <label
+              class="radio-button"
+              for="yes"
+              >Да</label
+            >
+            <input
+              class="hidden-radio-button _hiden"
+              type="radio"
+              id="no"
+              name="email_subscribtion_status" />
+            <label
+              class="radio-button"
+              for="no"
+              >Нет</label
+            >
+          </div>
+          <label for="user-feedback"
+            ><p class="feedback-form-area-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p></label
+          >
+          <textarea
+            class="user-feedback"
+            name=""
+            placeholder="Может, больше рецептов?"
+            id="user-feedback"></textarea>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
