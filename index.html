@@ -896,7 +896,7 @@
         <form
           class="feedback-form-area"
           action="#">
-          <p class="feedback-form-area-hint">Как часто вы заходите на сайт?</p>
+          <div class="feedback-form-area-hint">Как часто вы заходите на сайт?</div>
           <select
             class="selector"
             name="visit_frequency">
@@ -904,7 +904,7 @@
             <option value="2">Раз в неделю</option>
             <option value="3">Раз в месяц</option>
           </select>
-          <p class="feedback-form-area-hint">Вы подписаны на e-mail рассылку?</p>
+          <div class="feedback-form-area-hint">Вы подписаны на e-mail рассылку?</div>
           <div class="radio-buttons">
             <input
               class="hidden-radio-button _hiden"
@@ -928,9 +928,11 @@
               >Нет</label
             >
           </div>
-          <label for="user-feedback"
-            ><p class="feedback-form-area-hint">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</p></label
-          >
+          <label
+            class="feedback-form-area-hint"
+            for="user-feedback"
+            >Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+          </label>
           <textarea
             class="user-feedback"
             name="detailed-user-feedback"

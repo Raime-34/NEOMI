@@ -670,10 +670,7 @@ body {
 
 @media (max-width: 1300px) {
   .navigation-bar {
-    /* width: clamp(100px, 96vw, 1200px); */
-    width: none;
     padding-top: 16px;
-    gap: none;
     justify-content: space-around;
   }
 
