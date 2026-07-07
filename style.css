@@ -50,7 +50,7 @@ body {
 
 .trends {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1660px;
   margin-top: 64px;
 }
 
@@ -62,12 +62,13 @@ body {
 }
 
 .trends-item {
-  max-height: 320px;
+  /* max-height: 320px; */
   background-color: black;
   position: relative;
   display: flex;
   align-items: flex-end;
   padding: 16px 18px;
+  min-height: 290px;
 }
 
 .content-tags-list {
@@ -160,13 +161,13 @@ body {
 }
 
 .navigation-bar {
-  max-width: 1200px;
+  width: clamp(100px, 83vw, 1200px);
   display: flex;
-  gap: clamp(100px, 44vw, 633px);
-  justify-content: space-between;
+  gap: clamp(100px, 44vw, 526px);
   align-items: center;
   z-index: 1;
   margin: 0 35px;
+  padding-left: 35px;
 }
 
 .navigation-bar-burger-menu {
@@ -667,17 +668,28 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 1249px) {
-  .page-header:before {
-    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/banner-bg-tablet.jpg);
+@media (max-width: 1300px) {
+  .navigation-bar {
+    /* width: clamp(100px, 96vw, 1200px); */
+    width: none;
+    padding-top: 16px;
+    gap: none;
+    justify-content: space-around;
   }
 
-  .main-articles-list-item:nth-of-type(n + 6) {
+  .nav-menu-list {
     display: none;
   }
 
-  .navigation-bar {
-    gap: 68vw;
+  .navigation-bar-burger-menu {
+    display: block;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1249px) {
+  .page-header:before {
+    background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/refs/heads/master/sources/img/banner-bg-tablet.jpg);
   }
 
   .article-info-title-content {
@@ -701,7 +713,7 @@ body {
   }
 
   .trends-item {
-    height: 245px;
+    min-height: 210px;
   }
 
   .trends-item-content {
@@ -726,14 +738,6 @@ body {
 
   .header-content-logo {
     width: 158px;
-  }
-
-  .navigation-bar-burger-menu {
-    display: block;
-  }
-
-  .nav-menu-list {
-    display: none;
   }
 
   .trends-list {
@@ -777,13 +781,26 @@ body {
   }
 }
 
+@media (max-width: 1059px) {
+  .goods-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .goods-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 680px) {
   .page-header {
     height: 514px;
   }
 
   .header-content-title {
-    font-size: clamp(26px, 5vw, 41px);
+    font-size: clamp(35px, 5vw, 41px);
   }
 
   .page-header:before {
@@ -819,18 +836,24 @@ body {
   .main-footer {
     width: calc(100% - 2 * 14px);
   }
+
+  .header-content-title {
+    margin-top: 190px;
+  }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .page-header {
+    height: 530px;
     position: relative;
+    margin-bottom: 0;
   }
 
   .header-content-logo {
     position: absolute;
     top: 50%;
     width: 269px;
-    transform: translate(17%, -133%);
+    transform: translate(-7%, -124%);
   }
 
   .navigation-bar-burger-menu {
@@ -849,8 +872,9 @@ body {
     font-size: 26px;
     position: absolute;
     top: 50%;
-    transform: translate(0%, -67%);
+    transform: translate(2%, -61%);
     line-height: 36px;
+    margin-top: 75px;
   }
 
   .trends-item-title {
@@ -886,7 +910,19 @@ body {
   }
 
   .trends-item {
-    height: 231px;
+    min-height: 198px;
+  }
+
+  .trends-list {
+    gap: 2px;
+  }
+
+  .sidebar {
+    margin-bottom: 44px;
+  }
+
+  .content-title {
+    font-size: 18px;
   }
 
   .trends-item-content {
@@ -927,6 +963,10 @@ body {
   .footer-social {
     margin-top: 23px;
     margin-bottom: 37px;
+  }
+
+  .large-section-header {
+    font-size: 16px;
   }
 }
 
@@ -981,6 +1021,27 @@ body {
   appearance: none;
   padding: 18px;
   margin-bottom: 35px;
+  background: #f4f7f6;
+  background-image: url(https://raw.githubusercontent.com/netology-code/mq-diploma/906f7ee6f65a9aea4b5e0941f1087c12bd4e43ff/sources/svg/form-arrows.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.selector:focus {
+  outline: 1px solid #b59f5b;
+}
+
+textarea,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "OpenSans", sans-serif;
+}
+
+textarea:focus {
+  outline: 1px solid #b59f5b;
 }
 
 .radio-buttons {
@@ -1038,4 +1099,8 @@ body {
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.main-articles-list-item:nth-of-type(n + 6) {
+  display: none;
 }
