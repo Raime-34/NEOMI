@@ -626,14 +626,11 @@ p {
 
 .price-info-without-discount {
   font-size: 14px;
+  text-decoration: line-through;
 }
 
 .price-info-current-price {
   font-size: 21px;
-}
-
-.price-info-without-discount {
-  text-decoration: line-through;
 }
 
 .goods-item-purchase-block-button {
@@ -732,10 +729,6 @@ p {
     margin-bottom: 30px;
   }
 
-  .large-section-header {
-    margin-bottom: 19px;
-  }
-
   .page-content {
     margin-top: 50px;
     gap: 35px;
@@ -775,6 +768,7 @@ p {
   }
 
   .large-section-header {
+    margin-bottom: 19px;
     font-size: 18px;
   }
 
@@ -851,10 +845,6 @@ p {
     height: 514px;
   }
 
-  .header-content-title {
-    font-size: clamp(35px, 5vw, 41px);
-  }
-
   .page-header:before {
     background-image: url("img/banner-mobile.jpg");
   }
@@ -890,6 +880,7 @@ p {
   }
 
   .header-content-title {
+    font-size: clamp(35px, 5vw, 41px);
     margin-top: 190px;
   }
 }
@@ -912,12 +903,6 @@ p {
     width: 74vw;
     min-width: 269px;
     transform: translate(3%, -115%);
-  }
-
-  .navigation-bar-burger-menu {
-    position: absolute;
-    top: 30px;
-    right: 17px;
   }
 
   .navigation-bar {
@@ -944,23 +929,18 @@ p {
     margin-bottom: 0;
   }
 
-  .article-info-title-content {
-    margin-bottom: 19px;
-  }
-
   .article-info-author {
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 
   .main-articles-list {
     gap: 60px;
   }
 
-  .article-info-author {
-    margin-bottom: 11px;
-  }
-
   .navigation-bar-burger-menu {
+    position: absolute;
+    top: 30px;
+    right: 17px;
     align-self: flex-end;
     margin-right: 0;
   }
@@ -977,10 +957,6 @@ p {
     gap: 2px;
   }
 
-  .sidebar {
-    margin-bottom: 44px;
-  }
-
   .content-title {
     font-size: 16px;
   }
@@ -990,10 +966,12 @@ p {
   }
 
   .article-info-title-content {
+    margin-bottom: 19px;
     font-size: 15px;
   }
 
   .sidebar {
+    margin-bottom: 44px;
     width: 100%;
     gap: 38px;
   }
