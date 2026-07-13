@@ -690,7 +690,6 @@ p {
   max-width: 330px;
   padding: 54px 30px;
   margin: 0 14px;
-  transform: translate(0px, -155.5px);
 }
 
 .radio-button::before {
@@ -844,10 +843,6 @@ p {
 
   .goods-list {
     gap: 20px;
-  }
-
-  .feedback-form {
-    transform: translate(0px, -131.5px);
   }
 
   .radio-button::before {
@@ -1054,7 +1049,6 @@ p {
   }
 
   .feedback-form {
-    transform: translate(0px, -171.5px);
     padding: 30px 30px;
   }
 }
